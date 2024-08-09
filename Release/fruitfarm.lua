@@ -4,15 +4,21 @@ if queueteleport then
 local script = [[loadstring(game:HttpGet('https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruit.lua'))()]]
 queueteleport(script)
 end
-      local Noclip = Instance.new("BodyVelocity")
+spawn(function()
+ while wait(1) do
+                        if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFristChild('BodyClip') then
+local Noclip = Instance.new("BodyVelocity")
     Noclip.Name = "BodyClip"
     Noclip.Parent = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
     Noclip.MaxForce = Vector3.new(100000,100000,100000)
     Noclip.Velocity = Vector3.new(0,0,0)
+                        end
   for _, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
     if v:IsA("BasePart") then
     v.CanCollide = false
     end
     end
+ end
+end)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruit.lua'))()
 end
