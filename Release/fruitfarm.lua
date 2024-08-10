@@ -32,15 +32,5 @@ if queueteleport then
 local script = [[loadstring(game:HttpGet('https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruit.lua'))()]]
 queueteleport(script)
 end
-if game.workspace:FindFirstChild("WaterWalk") then
-    game.workspace:FindFirstChild("WaterWalk"):Destroy()
-end
-platform = Instance.new("Part")
-platform.Name = "WaterWalk"
-platform.Size = Vector3.new(math.huge, 1, math.huge)
-platform.Transparency = 1
-platform.Anchored = true
-platform.Parent = game.workspaceplatform.Position = Vector3.new(game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position.X,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position.Y * 0 -5, game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position.Z)
-
 loadstring(game:HttpGet('https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruit.lua'))()
 end
